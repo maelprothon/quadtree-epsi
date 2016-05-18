@@ -1,0 +1,28 @@
+Le script shell exec.sh permet de lancer le jar en lui passant des paramètres.
+Après compilation du projet java Il faut placer le script exec.sh dans le dossier dist/ où se trouve le .jar. Puis concatener les deux. 
+Pour cela:
+
+PATH_PROJECT=
+cd $PATH_PROJECT/dist/
+cat exec.sh quadtree.jar > appquadtree
+
+Puis suivre la doc du script:
+
+./appquadtree -help
+
+Sa doit renvoyer cette doc :
+
+HELP: Quadtree Java Programme :
+1) ./appquadtree -list
+2) ./appquadtree -depth 10 20     
+3) ./appquadtree -nearest 10 20
+-list | -l : List the all generated points.
+-depth | -d : Know the depth of a point in the tree , with the X,Y coordinates of the point.
+-nearest | -n : Know the closest to a given point points, with the X,Y coordinates of the point
+
+Pour que le script fonctionne utilisez le Main.java que j'ai prérempli sur ma branche et qui utilise les arguments passer grâce au script bash:
+
+
+
+
+
